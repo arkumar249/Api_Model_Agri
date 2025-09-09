@@ -7,9 +7,9 @@ import cloudinary
 import cloudinary.uploader
 
 cloudinary.config(
-    cloud_name="dv2voz8ae",
-    api_key="867895535557847",
-    api_secret="pV9BW7JBafLhSAdg5aDKtOivfL0"
+    cloud_name=CLOUD_NAME,
+    api_key=CLOUDINARY_API_KEY,
+    api_secret=CLOUDINARY_SECRET
 )
 router=APIRouter(prefix="/upload",tags=["upload"])
 
