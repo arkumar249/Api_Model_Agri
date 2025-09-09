@@ -9,6 +9,7 @@ from xgboost import XGBClassifier
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # ------------------ CONFIG ------------------
+GOOGLE_API_KEY=""
 BASE_DIR = os.path.dirname(__file__)   # path to Models/
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 os.makedirs(MODEL_DIR, exist_ok=True)
@@ -97,7 +98,7 @@ def predict_top3_crops_ensemble(model, features, label_encoder):
 # ------------------ LLM SETUP ------------------
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-preview-05-20",
-    google_api_key="AIzaSyA5psEV1VtE2K468FmV5sCZyQ1sbUkIfgQ",
+    google_api_key=GOOGLE_API_KEY,
     temperature=0.3
 )
 
